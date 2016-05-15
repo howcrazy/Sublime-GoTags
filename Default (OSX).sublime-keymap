@@ -1,0 +1,6 @@
+[
+    {
+        "keys": ["super+g", "super+t"],
+        "command": "go_tags"
+    }
+]

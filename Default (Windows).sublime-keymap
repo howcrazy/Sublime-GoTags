@@ -1,0 +1,6 @@
+[
+    {
+        "keys": ["ctrl+g", "ctrl+t"],
+        "command": "go_tags"
+    }
+]
