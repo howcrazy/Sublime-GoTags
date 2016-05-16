@@ -211,7 +211,7 @@ class GoTypTagsCommand(sublime_plugin.TextCommand):
                     begin = line.end() + 1
                     continue
                 r = find(r'(?s)^[\t ]*[\w_]+[\t ]+(interface\{\}|[\w._\[\]]+)([\t ]+`.*?`)?', max(skip, begin))
-                if r.empty():
+                if not r or r.empty():
                     break
                 if r.begin() < line.end():
                     t = self.view.size()
@@ -223,11 +223,11 @@ class GoTypTagsCommand(sublime_plugin.TextCommand):
                     r_offset += offset
                     continue
                 r = find(r'.*?(`.*?`|//)*?/\*', r.end()+1 if r.end() < line.end() else line.begin())
-                if r.empty() or r.begin() > line.end():
+                if not r or r.empty() or r.begin() > line.end():
                     begin = line.end() + 1
                     continue
                 r = find(r'\*/', r.end()+1)
-                if r.empty():
+                if not r or r.empty():
                     break
                 skip = r.end()
                 begin = r.end() + 1
