@@ -1,6 +1,6 @@
 # GoTags
 
-GoTags is a Sublime Text 3 plugin to append or remove tags for Golang struct.
+GoTags is a Sublime Text plugin to append or remove tags for Golang struct.
 
 Functionality includes:
 
@@ -18,9 +18,9 @@ For example:
 
 ```golang
 type Example struct {
-    Field1 int       ``         // int field
-    Field2 string    `orig tag` // string field
-    Field3 time.Time // time field
+    FieldOne int       ``         // int field
+    FieldTwo string    `orig tag` // string field
+    FieldThree time.Time // time field
 }
 ```
 
@@ -28,9 +28,9 @@ Then select `type Example struct {` line (or this is current line) and type the 
 
 ```golang
 type Example struct {
-    Field1  int `json:"field1"`         // int field
-    Field2  string  `orig tag json:"field2"` // string field
-    Field3  time.Time   `json:"field3"` // time field
+	FieldOne	int	`json:"field_one"`         // int field
+	FieldTwo	string	`orig tag json:"field_two"` // string field
+	FieldThree	time.Time	`json:"field_three"` // time field
 }
 ```
 
@@ -38,9 +38,9 @@ After save with gofmt:
 
 ```golang
 type Example struct {
-    Field1 int       `json:"field1"`          // int field
-    Field2 string    `orig tag json:"field2"` // string field
-    Field3 time.Time `json:"field3"`          // time field
+	FieldOne   int       `json:"field_one"`          // int field
+	FieldTwo   string    `orig tag json:"field_two"` // string field
+	FieldThree time.Time `json:"field_three"`        // time field
 }
 ```
 
