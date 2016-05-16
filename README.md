@@ -12,7 +12,7 @@ Functionality includes:
 
 Via the keyboard shortcut: `Super + G`, `Super + T` on OSX or `Ctrl + G`, `Ctrl + T` on other platforms. Then choice the action you want.
 
-** Makesure line `type STRUCT_NAME struct{` in select region. **
+** Makesure lines `type STRUCT_NAME struct{` are in select region. **
 
 For example:
 
