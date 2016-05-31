@@ -1,6 +1,6 @@
 [
     {
-        "keys": ["super+g", "super+t"],
+        "keys": ["super+shift+g", "super+shift+t"],
         "command": "go_tags"
     }
 ]

@@ -1,6 +1,6 @@
 [
     {
-        "keys": ["ctrl+g", "ctrl+t"],
+        "keys": ["ctrl+shift+g", "ctrl+shift+t"],
         "command": "go_tags"
     }
 ]

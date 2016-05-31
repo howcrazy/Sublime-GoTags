@@ -10,7 +10,10 @@ Functionality includes:
 
 ## Usage
 
-Via the keyboard shortcut: `Super + G`, `Super + T` on OSX or `Ctrl + G`, `Ctrl + T` on other platforms. Then choice the action you want.
+By default via the keyboard shortcut: `Super + Shift + G`, `Super + Shift + T`
+on OSX or `Ctrl + Shift + G`, `Ctrl + Shift + T` on other platforms(or change it
+in ${packages}/User/Default (plantform).sublime-keymap). Then choice the action
+you want.
 
 ** Makesure lines `type STRUCT_NAME struct{` are in select region. **
 
@@ -24,7 +27,8 @@ type Example struct {
 }
 ```
 
-Then select `type Example struct {` line (or this is current line) and type the shortcut, select action `JSON: Append tags`:
+Then select `type Example struct {` line (or this is current line) and type the
+shortcut, select action `JSON: Append tags`:
 
 ```golang
 type Example struct {

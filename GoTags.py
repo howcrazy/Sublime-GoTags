@@ -143,7 +143,7 @@ class Member(object):
 
     def parse(self, tag_type):
         return re.sub(
-            r'(?s)^[\t ]*(?P<name>[\w_]+)[\t ]+(?P<typ>(interface\{\}|[\w._\[\]]+))([\t ]+`(?P<tags>.*?)`)?',
+            r'(?s)^[\t ]*(?P<name>[\w_]+)[\t ]+(?P<typ>(interface\{\}|[\w\*._\[\]]+))([\t ]+`(?P<tags>.*?)`)?',
             lambda matchObj: self._parse(matchObj, tag_type),
             self.orig_context,
         )
@@ -210,7 +210,7 @@ class GoTypTagsCommand(sublime_plugin.TextCommand):
                 if begin < skip:
                     begin = line.end() + 1
                     continue
-                r = find(r'(?s)^[\t ]*[\w_]+[\t ]+(interface\{\}|[\w._\[\]]+)([\t ]+`.*?`)?', max(skip, begin))
+                r = find(r'(?s)^[\t ]*[\w_]+[\t ]+(interface\{\}|[\w\*._\[\]]+)([\t ]+`.*?`)?', max(skip, begin))
                 if not r or r.empty():
                     break
                 if r.begin() < line.end():
