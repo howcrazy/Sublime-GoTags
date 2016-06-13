@@ -19,7 +19,7 @@ you want.
 
 For example:
 
-```golang
+```go
 type Example struct {
     FieldOne int       ``         // int field
     FieldTwo string    `orig tag` // string field
@@ -30,7 +30,7 @@ type Example struct {
 Then select `type Example struct {` line (or this is current line) and type the
 shortcut, select action `JSON: Append tags`:
 
-```golang
+```go
 type Example struct {
 	FieldOne	int	`json:"field_one"`         // int field
 	FieldTwo	string	`orig tag json:"field_two"` // string field
@@ -40,7 +40,7 @@ type Example struct {
 
 After save with gofmt:
 
-```golang
+```go
 type Example struct {
 	FieldOne   int       `json:"field_one"`          // int field
 	FieldTwo   string    `orig tag json:"field_two"` // string field
